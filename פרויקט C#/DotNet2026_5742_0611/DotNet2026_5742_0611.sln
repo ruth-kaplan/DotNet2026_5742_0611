@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36221.1 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DalTest", "DalTest\DalTest.csproj", "{84CAA3C0-8FF3-49AB-B2BC-AC1C25202DEB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DalFacade", "DalFacade\DalFacade.csproj", "{1128C83E-8A90-411B-B899-16A6AB41AC80}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DalList", "DalList\DalList.csproj", "{0D733DE7-2534-4E1B-8FAD-D5BEF8E1F2FE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{84CAA3C0-8FF3-49AB-B2BC-AC1C25202DEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84CAA3C0-8FF3-49AB-B2BC-AC1C25202DEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84CAA3C0-8FF3-49AB-B2BC-AC1C25202DEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84CAA3C0-8FF3-49AB-B2BC-AC1C25202DEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1128C83E-8A90-411B-B899-16A6AB41AC80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1128C83E-8A90-411B-B899-16A6AB41AC80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1128C83E-8A90-411B-B899-16A6AB41AC80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1128C83E-8A90-411B-B899-16A6AB41AC80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D733DE7-2534-4E1B-8FAD-D5BEF8E1F2FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D733DE7-2534-4E1B-8FAD-D5BEF8E1F2FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D733DE7-2534-4E1B-8FAD-D5BEF8E1F2FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D733DE7-2534-4E1B-8FAD-D5BEF8E1F2FE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7961EA0F-0FD6-4DBE-8CCE-6DD0019296E7}
+	EndGlobalSection
+EndGlobal
