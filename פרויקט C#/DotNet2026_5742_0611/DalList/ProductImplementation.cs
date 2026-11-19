@@ -1,5 +1,6 @@
 ﻿namespace DalList;
 
+using Dal.Exceptions;
 using DalFacade.DalApi;
 using DO;
 
@@ -27,8 +28,7 @@ internal class ProductImplementation : IProduct
     {
         Product? existing = DataSource.Products.FirstOrDefault(p => p?.ID == item.ID);
         if (existing == null)
-            throw new KeyNotFoundException($"Product with ID {item.ID} does not exist.");
-
+            throw new EntityNotFoundException(item.ID);
         DataSource.Products.Remove(existing);
         DataSource.Products.Add(item);
     }
@@ -37,8 +37,7 @@ internal class ProductImplementation : IProduct
     {
         Product? existing = DataSource.Products.FirstOrDefault(p => p?.ID == id);
         if (existing == null)
-            throw new KeyNotFoundException($"Product with ID {id} does not exist.");
-
+            throw new EntityNotFoundException(id);
         DataSource.Products.Remove(existing);
     }
 }

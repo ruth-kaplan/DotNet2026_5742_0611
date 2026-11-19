@@ -1,5 +1,6 @@
 ﻿namespace DalList;
 
+using Dal.Exceptions;
 using DalFacade.DalApi;
 using DO;
 
@@ -9,8 +10,7 @@ internal class CustomerImplementation : ICustomer
     public int Create(Customer item)
     {
         if (DataSource.Customers.Any(c => c?.ID == item.ID))
-            throw new InvalidOperationException($"Customer with ID {item.ID} already exists.");
-
+            throw new DuplicateIdException(item.ID);
         Customer copy = item with { };
         DataSource.Customers.Add(copy);
         return copy.ID;
@@ -30,8 +30,7 @@ internal class CustomerImplementation : ICustomer
     {
         Customer? existing = DataSource.Customers.FirstOrDefault(c => c?.ID == item.ID);
         if (existing == null)
-            throw new KeyNotFoundException($"Customer with ID {item.ID} does not exist.");
-
+            throw new EntityNotFoundException(item.ID);
         DataSource.Customers.Remove(existing);
         DataSource.Customers.Add(item);
     }
@@ -40,8 +39,7 @@ internal class CustomerImplementation : ICustomer
     {
         Customer? existing = DataSource.Customers.FirstOrDefault(c => c?.ID == id);
         if (existing == null)
-            throw new KeyNotFoundException($"Customer with ID {id} does not exist.");
-
+            throw new EntityNotFoundException(id);
         DataSource.Customers.Remove(existing);
     }
 
